@@ -1,3 +1,5 @@
+//semáforo digital, práctica 0
+
 void setup() 
 {
     pinMode(13, OUTPUT);
