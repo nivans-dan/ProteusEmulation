@@ -1,18 +1,29 @@
-void setup()
+void setup() 
 {
-    Serial.begin (9600);
-    pinMode (A1, INPUT);
+    pinMode(13, OUTPUT);
+    pinMode(12, OUTPUT);
+    pinMode(11, OUTPUT);
+    pinMode(10, OUTPUT);
+    pinMode(9, OUTPUT);
+    pinMode(8, OUTPUT);
 }
 
-void loop()
+void loop() 
 {
-    float aux = analogRead (A1);
-    float voltaje = aux * (5.0 / 1023.0);
-    float Temp = voltaje/.0926;
-    
-    Serial.print("Temperatura = ");
-    Serial.print(Temp);
-    Serial.println(" C");
-
-    delay(1000);
+    digitalWrite(13, HIGH);
+    digitalWrite(8, HIGH);
+    delay(6000); 
+    digitalWrite(12,HIGH);
+    delay(6000);
+    digitalWrite(13, LOW);
+    digitalWrite(8, LOW);
+    digitalWrite(12,LOW);
+    digitalWrite(11, HIGH);
+    digitalWrite(10, HIGH);
+    delay(6000);
+    digitalWrite(9,HIGH);
+    delay(6000);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(9,LOW);
 }
